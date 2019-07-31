@@ -5,18 +5,20 @@ const container = document.querySelector(".grid-container");
     {
         for(let i = 0; i < x; i++){
         
+             
             for(let j = 0; j <x; j++){
                 let div = document.createElement("div");
                 div.classList.add("grid-item");
-                container.appendChild(div);  
+                container.appendChild(div); 
+                
             }
             
         }
-        document.body.setAttribute("style", "width: calc(100px*8); height:calc(100px*8)")
+        container.setAttribute("style",`grid-template-columns:  repeat(${x}, 1fr);`)
     }
     
          
-        createGrid(8);
+        createGrid(16);
       
     
 
