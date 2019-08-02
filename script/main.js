@@ -1,6 +1,10 @@
 const container = document.querySelector(".grid-container");
-const btn = document.getElementById("btn");
-btn.addEventListener("click", resetGrid)
+const gridItems = document.getElementsByClassName("grid-item")
+const reset = document.getElementById("btn");
+const clear = document.getElementById("clear")
+
+reset.addEventListener("click", resetGrid);
+clear.addEventListener("click", clearGrid);
 let gridSize = prompt();
 
 
@@ -20,7 +24,7 @@ let gridSize = prompt();
     } 
  
     function colorGrid(){
-       this.setAttribute("style","background:pink");
+       this.classList.add("colored");
 
     }
 
@@ -30,7 +34,17 @@ let gridSize = prompt();
     function resetGrid(){
         location.reload("index.html");
     }
+    
+    function clearGrid(){
+        for(let i = 0; i < gridItems.length; i++){
+            gridItems[i].classList.remove("colored");
+        }
+        
+    }
 
+    
+    
+    
     
        
 

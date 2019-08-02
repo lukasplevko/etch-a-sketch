@@ -1,26 +1,28 @@
 body{
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
+font-size: 16px;
+display: flex;
+justify-content: center;
     
 }
 .grid-container {
-  max-width: 960px;
-   display:grid; 
-  top: 200px;
+  width: 960px;
+  height: 960px;
+  display:grid; 
   position: absolute;
-
+  top: 200px;
+  margin-bottom: 100px;
   }
   .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    width: 3em;
-    height: 3em;
-    
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  
   }
-
   .button{
     margin-top: 100px;
+  }
+
+  .grid-item.colored{
+    background-color: red;
   }
 
  
